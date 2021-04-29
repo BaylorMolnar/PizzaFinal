@@ -1,3 +1,17 @@
+{% load bootstrap4 %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Baylor's Pizzeria</title>
+    {% bootstrap_css %}
+    {% bootstrap_javascript jquery='full' %}
+</head>
+
+</html>
 <p>
     <a href="{% url 'Pizza:index' %}"> Baylor's Pizzeria</a>
     <a href="{% url 'Pizza:pizzas' %}"> Pizzas</a>
