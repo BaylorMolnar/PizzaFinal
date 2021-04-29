@@ -5,9 +5,9 @@
 <p>Types of Pizzas:</p>
 
 <ul>
-    {% for pizza in pizzas %}
+    {% for p in pizzas %}
 
-    <li>{{pizza}}</li>
+    <li><a href="{% url 'Pizza:pizza' p.id %}">{{p}}</a></li>
 
     {% endfor %}
 
