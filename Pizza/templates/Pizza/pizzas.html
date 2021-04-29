@@ -1,0 +1,17 @@
+{% extends "Pizza/base.html" %}
+
+
+{% block content %}
+<p>Types of Pizzas:</p>
+
+<ul>
+    {% for pizza in pizzas %}
+
+    <li>{{pizza}}</li>
+
+    {% endfor %}
+
+</ul>
+
+
+{% endblock content %}
