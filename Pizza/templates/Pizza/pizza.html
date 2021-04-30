@@ -6,12 +6,21 @@
 {% load static %} <img src="{% static 'Pizza/images/pizza.jpg' %}" alt="home" />
 <ul>
     {% for topping in toppings %}
+    {% if forloop.first %}
     <li>
         <p>{{topping.name | linebreaks }}</p>
     </li>
+    {% endif %}
     {% endfor %}
 </ul>
 
-<p> <a href="{% url 'Pizza:new_comment' pizza.id %}">Add a comment</a></p>
 
+<p> <a href="{% url 'Pizza:new_comment' pizza.id %}">Add a comment</a></p>
+<p>
+    {% for topping in toppings %}
+    {% if not forloop.first %}
+    {{ topping.name }}
+    {% endif %}
+    {% endfor %}
+</p>
 {% endblock content %}
