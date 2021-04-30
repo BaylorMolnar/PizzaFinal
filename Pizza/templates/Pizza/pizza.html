@@ -3,7 +3,7 @@
 
 {% block content %}
 <p>Pizza: {{pizza}} </p>
-
+{% load static %} <img src="{% static 'Pizza/images/pizza.jpg' %}" alt="home" />
 <ul>
     {% for topping in toppings %}
     <li>
