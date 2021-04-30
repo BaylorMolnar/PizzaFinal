@@ -13,6 +13,7 @@ class Pizza(models.Model):
 class Topping(models.Model):
     pizza = models.ForeignKey(Pizza, on_delete=models.CASCADE)
     name = models.TextField()
+    image = models.ImageField(upload_to="images", blank=True)
     date_added = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
