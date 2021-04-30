@@ -1,8 +1,15 @@
 {% extends "Pizza/base.html" %}
 
+{% block page_header %}
+<div class="jumbotron">
+    <h1 class="display-3">Welcome to Baylor's Pizzeria</h1>
+
+    <p class="lead">We have award winning Pizza that has been voted the best in Waco for 10 years straight.</p>
+    <a class="btn btn-lg btn primary" href="{% url 'users:register' %}" role="button">Register for account &raquo;</a>
+</div>
+{% endblock page_header %}
 
 {% block content %}
-<p>Welcome to Baylor's Pizzeria</p>
 
 <p>Here is one of our customers' favorite pizzas:</p>
 <p> </p>
